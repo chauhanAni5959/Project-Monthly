@@ -1,0 +1,323 @@
+body {
+  background: #191a17;
+  color: #2e2c21;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 32px auto;
+  padding: 24px;
+  border-radius: 24px;
+  border: 4px solid #cac4b2;
+  background: #1a1b17;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 18px;
+  border: 2px solid #cac4b2;
+  padding: 16px 32px;
+  margin-bottom: 24px;
+}
+
+.nav-brand {
+  color: #cac4b2;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 16px;
+}
+
+.nav-link {
+  color: #cac4b2;
+  padding: 6px 24px;
+  border-radius: 18px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.nav-link.active, .nav-link:hover {
+  background: #ece3d5;
+  color: #191a17;
+}
+
+.contact-btn {
+  background: transparent;
+  border: 2px solid #cac4b2;
+  color: #cac4b2;
+  border-radius: 18px;
+  padding: 8px 24px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.contact-btn:hover {
+  background: #ece3d5;
+  color: #191a17;
+  transform: scale(1.05);
+}
+
+.main-content {
+  display: flex;
+  gap: 24px;
+}
+
+.left-card {
+  flex: 1.2;
+  background: #f5efe7;
+  border-radius: 22px;
+  padding: 32px 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 310px;
+  max-width: 380px;
+}
+
+.tag {
+  background: #ededdf;
+  color: #6c6650;
+  font-size: 12px;
+  padding: 4px 16px;
+  border-radius: 16px;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+}
+
+.left-card h2 {
+  margin: 0 0 18px;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.underline {
+  border-bottom: 3px solid #857569;
+}
+
+.left-card img {
+  width: 100%;
+  margin: 18px 0 24px 0;
+  border-radius: 18px;
+}
+
+.card-btn {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 22px;
+  background: #dad3ba;
+  color: #191a17;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.25s, color 0.18s, transform 0.22s;
+  margin-top: auto;
+}
+
+.card-btn:hover {
+  background: #f4ecd7;
+  color: #6d634e;
+  transform: scale(1.07);
+}
+
+.right-cards {
+  flex: 2.1;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.top-card {
+  background: #c2bd9e;
+  border-radius: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 26px 22px;
+  gap: 24px;
+}
+
+.top-card img {
+  width: 180px;
+  max-width: 40%;
+  border-radius: 18px;
+  object-fit: cover;
+  background: #dcdcce;
+}
+
+.top-text {
+  flex: 1;
+}
+
+.top-text h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.top-text p {
+  color: #3c3b33;
+  font-size: 0.97em;
+}
+
+/* Bottom row cards */
+.bottom-cards {
+  display: flex;
+  gap: 22px;
+}
+.bottom-cards .portrait-heading {
+    color: black;
+    font-weight: 1000;
+    font-size: 50px;
+}
+
+.card {
+  flex: 1;
+  border-radius: 22px;
+  padding: 22px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  background: #dabaaa;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 18px;
+}
+
+.card h3 {
+  margin: 10px 0 8px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.portrait-card {
+  background: #b9745f;
+  color: black;
+  
+}
+.portrait-card .dots {
+  display: flex;
+  gap: 5px;
+  margin-left: auto;
+  margin-top: 12px;
+}
+.dots span {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #593f36;
+}
+
+.painting-card {
+  background: #ede3cd;
+  color: #2e2c21;
+}
+
+.painting-card .footer-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 2px 2px 2px;
+  font-weight: 700;
+  border-bottom: 2px solid #b9b29a;
+  margin-bottom: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .main-content {
+    flex-direction: column;
+    gap: 14px;
+  }
+  .left-card, .right-cards {
+    max-width: 100%;
+    width: 100%;
+  }
+  .navbar {
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px 0;
+  }
+}
+
+/* Tablet tweaks for padding, card stacking, and image */
+@media (max-width: 768px) {
+  .left-card, .right-cards, .top-card, .card {
+    padding: 10px !important;
+  }
+  .top-card img, .card img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  .main-content {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    padding: 0.5em;
+    margin: 0;
+  }
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+  }
+  .main-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .left-card {
+    padding: 12px 6px;
+  }
+  .top-card, .bottom-cards, .card {
+    flex-direction: column;
+    padding: 10px 4px;
+  }
+  .bottom-cards {
+    gap: 8px;
+  }
+  .tag {
+    font-size: 10px;
+    padding: 2px 6px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container, .navbar, .main-content, .left-card, .right-cards, .top-card, .card, .portrait-card, .painting-card {
+    border-radius: 10px !important;
+    padding: 6px !important;
+  }
+  .left-card h2, .top-card h3, .card h3 {
+    font-size: 0.98rem !important;
+    margin-bottom: 8px;
+  }
+  .tag {
+    font-size: 8px !important;
+    padding: 2px 5px;
+    margin-bottom: 7px;
+  }
+  .card-btn, .contact-btn, .nav-link {
+    padding: 6px 14px !important;
+    font-size: 0.95em;
+  }
+  .navbar {
+    font-size: 1em;
+    gap: 4px;
+    padding: 5px 0;
+  }
+  .dots span {
+    width: 7px !important;
+    height: 7px !important;
+  }
+}
